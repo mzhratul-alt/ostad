@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <!-- User Input Section Start -->
     <div class="wrapper">
       <h2>BMI Calculator</h2>
       <label for="weightInput">Weight (In KG)</label>
@@ -22,9 +23,13 @@
       <input type="number" id="heightInput" placeholder="Enter Your Height in Meter" />
       <button id="calculateBtn">Calculate BMI</button>
     </div>
+    <!-- User Input Section End -->
 
+    <!-- Alert Box Section Start -->
     <div id="alert_box"></div>
+    <!-- Alert Box Section End -->
 
+    <!-- Result Box Section Start -->
     <div id="resultBox">
       <button onclick="boxClose()">Close</button>
       <div id="result_title"><span>32.2</span>Oops! Invalid Result!</div>
@@ -32,6 +37,7 @@
         <img src="" id="result_img" alt="">
       </div>
     </div>
+    <!-- Result Box Section End -->
 
     <script src="./js/app.js"></script>
   </body>
