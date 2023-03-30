@@ -1,3 +1,4 @@
+//Dom Element Selection
 let weight = document.getElementById('weightInput');
 let height = document.getElementById('heightInput');
 let calculateBtn = document.getElementById('calculateBtn');
@@ -7,6 +8,8 @@ let result_title = document.getElementById('result_title');
 let result_img = document.getElementById('result_img');
 let root = document.querySelector(':root');
 
+
+//Calculate BMI
 calculateBtn.addEventListener('click', function () {
     let weightValue = parseFloat(weight.value);
     let heightValue = parseFloat(height.value);
@@ -18,6 +21,7 @@ calculateBtn.addEventListener('click', function () {
     }else {
         let BMI = (weightValue / heightValue ** 2).toFixed(2);
 
+        //Check BMI Condition
         if (BMI > 30) {
             showResult(`<span>${BMI}</span> Obese`, './img/obese.gif','#B03A2E','#E74C3C')
         } else if (BMI >= 25 && BMI < 30) {
@@ -32,7 +36,7 @@ calculateBtn.addEventListener('click', function () {
     }
 })
 
-
+// Empty Input Validation Message
 function alertmsg(msg) {
     alert_box.innerText = msg;
     alert_box.classList.add('active');
@@ -41,14 +45,18 @@ function alertmsg(msg) {
     }, 3000)
 }
 
+//Show BMI Result
 function showResult(comment, img,primaryAlertColor,secondaryAlertColor) {
     resultBox.classList.add('active');
     result_title.innerHTML = comment;
     result_img.src = img;
+
+    //Change Result Modal Animation Color
     root.style.setProperty('--primary-alert-color', primaryAlertColor)
     root.style.setProperty('--secondary-alert-color', secondaryAlertColor)
 }
 
+//Close Result Modal
 function boxClose() {
     resultBox.classList.remove('active');
     weight.value = '';
