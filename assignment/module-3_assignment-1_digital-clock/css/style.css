@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    background: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clock{
+    border: 1px solid #13ce9f;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px -5px#13ce9f;
+    display: flex;
+}
+#clock div{
+    height: 100px;
+    width: 100px;
+    background: #13ce9f;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    font-family: sans-serif;
+    margin: 0 5px;
+    box-shadow: 0 0 15px -5px#13ce9f;
+    color:#333333;
+}
