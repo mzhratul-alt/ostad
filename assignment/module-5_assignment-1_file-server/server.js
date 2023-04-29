@@ -3,7 +3,7 @@ const fs = require('fs');
 
 let server = http.createServer((req, res) => {
     if (req.url == '/') {
-        fs.exists('./public/idex.html', function (result) {
+        fs.exists('./public/index.html', function (result) {
             if (result) {
                 fs.readFile('./public/index.html', function (error, data) {
                     res.writeHead(200, {
