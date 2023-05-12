@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const { nextTick } = require("process");
 const app = express();
 app.use(express.json());
 const port = 3000;
