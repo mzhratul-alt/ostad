@@ -1,0 +1,107 @@
+/*
+
+*/
+/* Common Css Start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+span,
+small {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style-type: none;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+/* Common Css End */
+
+/* Banner Section Css Start */
+ #banner {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8),rgba(12, 8, 88, 0.2)), url(../images/rugby.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 650px;
+  }
+ /* #banner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(11 80 74 / 60%);
+    z-index: -1;
+  }
+  #banner .container,
+  #banner .container .row {
+    height: 100%;
+  }
+  #banner > .container > .row {
+    align-items: center;
+  }
+  
+  #banner .banner_content {
+    text-align: center;
+    color: #eee;
+  }
+  
+  #banner .banner_content h4 {
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  #banner .banner_content h4::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    border: 2px dotted rgb(231, 154, 10);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  
+  #banner .banner_content h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    margin: 30px 0;
+  }
+  #banner .banner_content p {
+    font-size: 14px;
+    font-weight: 400;
+    width: 60%;
+    margin: auto;
+    line-height: 1.5;
+  }
+  #banner .banner_content a {
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid rgb(231, 154, 10);
+    padding: 10px 25px;
+    color: #fff;
+    margin: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s linear;
+  }
+  #banner .banner_content a:hover {
+    background-color: rgb(231, 154, 10);
+    border-radius: 8px;
+  } */
+/* Banner Section Css End */
