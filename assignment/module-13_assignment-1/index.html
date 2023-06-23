@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
    <head>
       <meta charset="UTF-8">
@@ -10,8 +10,6 @@
       <link rel="icon" href="./assets/images/logo.png">
       <!-- Fontawesome Css Link -->
       <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
-      <!-- Slick Css Link -->
-      <link rel="stylesheet" href="./assets/css/slick.min.css">
       <!-- Bootstrap Css Link -->
       <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
       <!-- Main Css Link -->
@@ -23,8 +21,17 @@
 
    <body>
 
+      <!-- Preloader Section Start -->
+      <section id="preloader"
+         class="position-fixed start-0 end-0 top-0 bottom-0 bg-black z-3 d-flex justify-content-center align-items-center">
+         <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+         </div>
+      </section>
+      <!-- Preloader Section End -->
+
       <!-- Navbar Section Start -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top z-2">
          <div class="container">
             <a class="navbar-brand" href="./index.html">Navbar</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#main_menu"
@@ -47,8 +54,11 @@
                      <a class="nav-link" href="#">Contact Us</a>
                   </li>
                </ul>
-               <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                  data-bs-target="#register_form">Register</button>
+               <div class="btn-group">
+                  <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                     data-bs-target="#register_form">Register</button>
+                  <button type="button" class="btn btn-dark" id="modeChanger">Dark Mode</button>
+               </div>
             </div>
          </div>
       </nav>
@@ -62,7 +72,7 @@
                   <h4 class="h4">Be Part of It</h4>
                   <hr class="w-25 mx-auto">
                   <h1 class="h1">We Create History</h1>
-                  <p class="lead w-50 mx-auto my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                  <p class="lead px-lg-5 mx-auto my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
                      fugit dolore laboriosam nobis mollitia nam vel. Dolores facere voluptate consequatur.</p>
                   <a href="#" class="btn btn-primary px-4 py-2">Learn More</a>
                </div>
@@ -135,8 +145,8 @@
             <div class="row">
                <div class="mx-auto col-lg-10">
                   <div class="table-responsive">
+                     <h2 class="display-6 text-center">Result from the English Premier League. </h2>
                      <table class="table table-bordered table-hover">
-                        <caption class="display-6 text-center">Result from the English Premier League. </caption>
                         <thead>
                            <tr>
                               <th>Classifier</th>
@@ -172,6 +182,15 @@
                            </tr>
                         </tbody>
                      </table>
+                     <nav>
+                        <ul class="pagination justify-content-end">
+                           <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                           <li class="page-item"><a class="page-link" href="#">1</a></li>
+                           <li class="page-item"><a class="page-link" href="#">2</a></li>
+                           <li class="page-item"><a class="page-link" href="#">3</a></li>
+                           <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                     </nav>
                   </div>
                </div>
             </div>
@@ -179,85 +198,123 @@
       </section>
       <!-- Table Section End -->
 
+      <!-- chart Section Start -->
+      <section id="chart">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <h2 class="h2">Which Framework is best? React/Vue?</h2>
+                  <h3 class="h3">Framework List</h3>
+                  <ul class="list-group">
+                     <li class="list-group-item">React</li>
+                     <li class="list-group-item">Vue</li>
+                     <li class="list-group-item">Angular</li>
+                  </ul>
+               </div>
+               <div class="col-lg-6">
+                  <canvas id="reactVsVue"></canvas>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- chart Section End -->
+
+      <!-- Iframe Section Start -->
+      <section id="Iframe">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-6">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                     <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                           data-bs-target="#pills-react" type="button">React</button>
+                     </li>
+                     <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                           data-bs-target="#pills-vue" type="button">Vue</button>
+                     </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                     <div class="tab-pane fade show active" id="pills-react">
+                        <iframe class="ratio ratio-1x1" src="https://www.youtube.com/embed/9zmwGT7DEsM"
+                           title="YouTube video player" frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           allowfullscreen></iframe>
+                     </div>
+                     <div class="tab-pane fade" id="pills-vue">
+                        <iframe class="ratio ratio-1x1" src="https://www.youtube.com/embed/GZJpDjdzdv8"
+                           title="YouTube video player" frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           allowfullscreen></iframe>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Iframe Section End -->
+
       <!-- Registration Form Modal Section Start -->
       <div class="modal fade" id="register_form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
          aria-labelledby="staticBackdropLabel" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Registration Form</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
                   <form class="row g-3 needs-validation">
                      <div class="col-md-6 position-relative">
-                       <label for="validationTooltip01" class="form-label">First name</label>
-                       <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-                       <div class="valid-tooltip">
-                         Looks good!
-                       </div>
+                        <label for="validationTooltip01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First Name"
+                           required>
+                        <div class="valid-tooltip">
+                           Looks good!
+                        </div>
                      </div>
                      <div class="col-md-6 position-relative">
-                       <label for="validationTooltip02" class="form-label">Last name</label>
-                       <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-                       <div class="valid-tooltip">
-                         Looks good!
-                       </div>
+                        <label for="validationTooltip02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Last Name"
+                           required>
+                        <div class="valid-tooltip">
+                           Looks good!
+                        </div>
+                     </div>
+
+                     <div class="col-md-6 position-relative">
+                        <label for="validationTooltip03" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="validationTooltip03" placeholder="Email" required>
+                        <div class="invalid-tooltip">
+                           Please provide a valid Email.
+                        </div>
                      </div>
                      <div class="col-md-6 position-relative">
-                       <label for="validationTooltipUsername" class="form-label">Username</label>
-                       <div class="input-group has-validation">
-                         <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                         <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-                         <div class="invalid-tooltip">
-                           Please choose a unique and valid username.
-                         </div>
-                       </div>
-                     </div>
-                     <div class="col-md-6 position-relative">
-                       <label for="validationTooltip03" class="form-label">City</label>
-                       <input type="text" class="form-control" id="validationTooltip03" required>
-                       <div class="invalid-tooltip">
-                         Please provide a valid city.
-                       </div>
-                     </div>
-                     <div class="col-md-3 position-relative">
-                       <label for="validationTooltip04" class="form-label">State</label>
-                       <select class="form-select" id="validationTooltip04" required>
-                         <option selected disabled value="">Choose...</option>
-                         <option>...</option>
-                       </select>
-                       <div class="invalid-tooltip">
-                         Please select a valid state.
-                       </div>
-                     </div>
-                     <div class="col-md-3 position-relative">
-                       <label for="validationTooltip05" class="form-label">Zip</label>
-                       <input type="text" class="form-control" id="validationTooltip05" required>
-                       <div class="invalid-tooltip">
-                         Please provide a valid zip.
-                       </div>
+                        <label for="validationTooltip03" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="validationTooltip03" placeholder="Password"
+                           required>
+                        <div class="invalid-tooltip">
+                           Please provide a Password.
+                        </div>
                      </div>
                      <div class="col-12">
-                       <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="w-100 btn btn-primary" type="submit">Submit form</button>
                      </div>
-                   </form>
+                  </form>
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
                </div>
             </div>
          </div>
       </div>
       <!-- Registration Form Modal Section End -->
 
-      <!-- Jquery Js Link -->
-      <script src="./assets/js/jquery-3.6.0.min.js"></script>
-      <!-- Slick Js Link -->
-      <script src="./assets/js/slick.min.js"></script>
       <!-- Bootstrap Js Link -->
       <script src="./assets/js/bootstrap.min.js"></script>
+      <!-- Chart Js Src -->
+      <script src="./assets/js/chart.js"></script>
+
       <!-- Main Js Link -->
       <script src="./assets/js/script.js"></script>
 
