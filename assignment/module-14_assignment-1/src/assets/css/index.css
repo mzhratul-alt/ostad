@@ -1,0 +1,101 @@
+/* Common Css Start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* Common Css End */
+
+/* Header Component Css Start */
+
+body {
+    background: #12c2e9; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to bottom,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #f64f59,
+        #c471ed,
+        #12c2e9
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    padding: 50px;
+    font-family: sans-serif;
+}
+header {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+#content_section textarea{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    resize: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+    font-size: 20px;
+    min-height: 200px;
+}
+#content_section textarea::placeholder{
+    color: #fff;
+    font-family: sans-serif;
+}
+
+#content_section button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #eee;
+    text-transform: uppercase;
+}
+#content_section .result{
+    min-height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    color: #fff;
+}
+footer{
+    margin-top: 20px;
+    background-color: #12c2e9;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border:none;
+    font-size: 20px;
+    text-align: center;
+}
+footer span{
+    font-size: 25px;
+}
+/* Header Component Css End */
